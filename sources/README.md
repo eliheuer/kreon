@@ -1,9 +1,9 @@
 # Source Notes
 
-The font file `Kreon/fonts/Kreon-VF.ttf` is built from source using the following command from the root directory:
+The Kreon font files are built from source using the following command from the root directory of this repo:
 
 ```
-python sources/BUILD.py && gftools fix-dsig fonts/*.ttf --autofix
+python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/kreon --static --fontbakery --fixnonhinting
 ```
 
 Dependencies installed should include:
