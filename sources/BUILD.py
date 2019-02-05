@@ -67,6 +67,9 @@ parser.add_argument(
 parser.add_argument(
     "--static", help="Build static fonts", action="store_true"
 )
+parser.add_argument(
+    "--fixnonhinting", help="Fix nonhinting with gs tools", action="store_true"
+)
 args = parser.parse_args()
 
 
@@ -122,6 +125,7 @@ def display_args():
     print("     [+] --ttfautohint\t", args.ttfautohint)
     print("     [+] --fontbakery\t", args.fontbakery)
     print("     [+] --static\t", args.static)
+    print("     [+] --fixnonhinting\t", args.fixnonhinting)
     printG("    [!] Done")
     time.sleep(4)
 
@@ -217,20 +221,32 @@ def prep_static_fonts():
     Run ttfautohint on all fonts and fix missing dsig
     """
     print("\n**** Moving static fonts:")
+
     for path in glob.glob("instance_ttf/*.ttf"):
         print(path)
         subprocess.call("cp %s fonts/static-fonts/" % path, shell=True)
     subprocess.call("rm -rf instance_ttf", shell=True)
+
     for static_font in glob.glob("fonts/static-fonts/*.ttf"):
         print(static_font)
         subprocess.call("gftools fix-dsig %s --autofix" % static_font, shell=True)
-        subprocess.call(
-            "ttfautohint %s %s temp.ttf"
-            % (args.ttfautohint, static_font),
-            shell=True,
-        )
-        subprocess.call("cp temp.ttf %s" % static_font, shell=True)
-        subprocess.call("rm -rf temp.ttf", shell=True)
+
+        if args.fixnonhinting == True:
+            print("FIXING NONHINTING")
+            subprocess.call("gftools fix-nonhinting %s %s.fix" % (static_font, static_font), shell=True)
+            subprocess.call("mv %s.fix %s" % (static_font, static_font), shell=True)
+            subprocess.call("rm -rf %s.fix" % static_font, shell=True)
+            subprocess.call("rm -rf fonts/static-fonts/*gasp.ttf", shell=True)
+            print("     [+] Done:", static_font)
+
+        if args.ttfautohint == True:
+            subprocess.call(
+                "ttfautohint %s %s temp.ttf"
+                % (args.ttfautohint, static_font),
+                shell=True,
+            )
+            subprocess.call("cp temp.ttf %s" % static_font, shell=True)
+            subprocess.call("rm -rf temp.ttf", shell=True)
     time.sleep(1)
     printG("    [!] Done")
 
@@ -258,6 +274,22 @@ def fix_dsig():
             shell=True,
         )
         print("     [+] Done:", source)
+    printG("    [!] Done")
+    time.sleep(1)
+
+
+def fix_nonhinting():
+    """
+    Fixes non-hinting
+    """
+    print("\n**** Run: gftools: fix nonhinting")
+    for path in glob.glob("fonts/*.ttf"):
+        print(path)
+        subprocess.call("gftools fix-nonhinting %s %s.fix" % (path, path), shell=True)
+        subprocess.call("mv %s.fix %s" % (path, path), shell=True)
+        subprocess.call("rm -rf %s.fix" % path, shell=True)
+        subprocess.call("rm -rf fonts/*gasp.ttf", shell=True)
+        print("     [+] Done:", path)
     printG("    [!] Done")
     time.sleep(1)
 
@@ -366,6 +398,12 @@ def main():
     get_source_list()
     get_style_list()
     run_fontmake_variable()
+
+    # fix non-hinting
+    if args.fixnonhinting == True:
+        fix_nonhinting()
+    else:
+        pass
 
     # make static fonts
     if args.static == True:
