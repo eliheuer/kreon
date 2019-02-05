@@ -120,11 +120,11 @@ def display_args():
     Gives info about the flags.
     """
     print("\n**** Settings:")
-    print("     [+] --drawbot\t", args.drawbot)
-    print("     [+] --googlefonts\t", args.googlefonts)
-    print("     [+] --ttfautohint\t", args.ttfautohint)
-    print("     [+] --fontbakery\t", args.fontbakery)
-    print("     [+] --static\t", args.static)
+    print("     [+] --drawbot\t\t", args.drawbot)
+    print("     [+] --googlefonts\t\t", args.googlefonts)
+    print("     [+] --ttfautohint\t\t", args.ttfautohint)
+    print("     [+] --fontbakery\t\t", args.fontbakery)
+    print("     [+] --static\t\t", args.static)
     print("     [+] --fixnonhinting\t", args.fixnonhinting)
     printG("    [!] Done")
     time.sleep(4)
