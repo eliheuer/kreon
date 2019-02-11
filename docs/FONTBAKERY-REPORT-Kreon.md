@@ -8,9 +8,9 @@ Fontbakery version: 0.6.7
 <summary>:information_source: <b>INFO:</b> Do we have the latest version of FontBakery installed?</summary>
 
 * [com.google.fonts/check/fontbakery_version](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/fontbakery_version)
-* :information_source: **INFO** fontbakery (0.6.8)  - Well designed Font QA tool, written in Python 3
+* :information_source: **INFO** fontbakery (0.6.10)  - Well designed Font QA tool, written in Python 3
   INSTALLED: 0.6.7
-  LATEST:    0.6.8
+  LATEST:    0.6.10
 
 * :bread: **PASS** Font Bakery is up-to-date
 
@@ -44,10 +44,94 @@ Fontbakery version: 0.6.7
 
 </details>
 <details>
+<summary>:bread: <b>PASS:</b> Check METADATA.pb parse correctly. </summary>
+
+* [com.google.fonts/check/metadata/parses](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/metadata/parses)
+* :bread: **PASS** METADATA.pb parsed successfuly.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> Font designer field in METADATA.pb must not be 'unknown'.</summary>
+
+* [com.google.fonts/check/007](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/007)
+* :bread: **PASS** Font designer field is not 'unknown'.
+
+</details>
+<details>
 <summary>:bread: <b>PASS:</b> Check font has a license.</summary>
 
 * [com.google.fonts/check/028](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/028)
 * :bread: **PASS** Found license at '/Users/Air/Google/fonts/ofl/kreon/OFL.txt'
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb: Fontfamily is listed on Google Fonts API?</summary>
+
+* [com.google.fonts/check/081](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/081)
+* :bread: **PASS** Font is properly listed via Google Fonts API.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb: check if fonts field only has unique "full_name" values.</summary>
+
+* [com.google.fonts/check/083](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/083)
+* :bread: **PASS** METADATA.pb "fonts" field only has unique "full_name" values.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb: check if fonts field only contains unique style:weight pairs.</summary>
+
+* [com.google.fonts/check/084](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/084)
+* :bread: **PASS** METADATA.pb "fonts" field only has unique style:weight pairs.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb license is "APACHE2", "UFL" or "OFL"?</summary>
+
+* [com.google.fonts/check/085](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/085)
+* :bread: **PASS** Font license is declared in METADATA.pb as "OFL"
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb should contain at least "menu" and "latin" subsets.</summary>
+
+* [com.google.fonts/check/086](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/086)
+* :bread: **PASS** METADATA.pb contains "menu" and "latin" subsets.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb subsets should be alphabetically ordered.</summary>
+
+* [com.google.fonts/check/087](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/087)
+* :bread: **PASS** METADATA.pb subsets are sorted in alphabetical order.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb: Copyright notice is the same in all fonts?</summary>
+
+* [com.google.fonts/check/088](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/088)
+* :bread: **PASS** Copyright is consistent across family
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> Check that METADATA.pb family values are all the same.</summary>
+
+* [com.google.fonts/check/089](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/089)
+* :bread: **PASS** METADATA.pb: Family name is the same in all metadata "fonts" items.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb: According Google Fonts standards, families should have a Regular style.</summary>
+
+* [com.google.fonts/check/090](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/090)
+* :bread: **PASS** Family has a Regular style.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> METADATA.pb: Regular should be 400.</summary>
+
+* [com.google.fonts/check/091](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/091)
+* :bread: **PASS** Regular has weight = 400.
 
 </details>
 <details>
@@ -106,108 +190,10 @@ Fontbakery version: 0.6.7
 * :bread: **PASS** Fonts have consistent underline thickness.
 
 </details>
-<details>
-<summary>:zzz: <b>SKIP:</b> Check METADATA.pb parse correctly. </summary>
-
-* [com.google.fonts/check/metadata/parses](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/metadata/parses)
-* :zzz: **SKIP** Font family at '/Users/Air/Google/fonts/ofl/kreon' lacks a METADATA.pb file.
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> Font designer field in METADATA.pb must not be 'unknown'.</summary>
-
-* [com.google.fonts/check/007](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/007)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb: Fontfamily is listed on Google Fonts API?</summary>
-
-* [com.google.fonts/check/081](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/081)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb: check if fonts field only has unique "full_name" values.</summary>
-
-* [com.google.fonts/check/083](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/083)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb: check if fonts field only contains unique style:weight pairs.</summary>
-
-* [com.google.fonts/check/084](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/084)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb license is "APACHE2", "UFL" or "OFL"?</summary>
-
-* [com.google.fonts/check/085](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/085)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb should contain at least "menu" and "latin" subsets.</summary>
-
-* [com.google.fonts/check/086](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/086)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb subsets should be alphabetically ordered.</summary>
-
-* [com.google.fonts/check/087](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/087)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb: Copyright notice is the same in all fonts?</summary>
-
-* [com.google.fonts/check/088](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/088)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> Check that METADATA.pb family values are all the same.</summary>
-
-* [com.google.fonts/check/089](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/089)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb: According Google Fonts standards, families should have a Regular style.</summary>
-
-* [com.google.fonts/check/090](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/090)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> METADATA.pb: Regular should be 400.</summary>
-
-* [com.google.fonts/check/091](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/091)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata, has_regular_style
-
-</details>
 <br>
 </details>
 <details>
 <summary><b>[117] Kreon-VF.ttf</b></summary>
-<details>
-<summary>:fire: <b>FAIL:</b> Is 'gasp' table set to optimize rendering?</summary>
-
-* [com.google.fonts/check/062](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/062)
-* :fire: **FAIL** Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
-
-</details>
-<details>
-<summary>:fire: <b>FAIL:</b> Font enables smart dropout control in "prep" table instructions?</summary>
-
-* [com.google.fonts/check/072](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/072)
-* :fire: **FAIL** 'prep' table does not contain TrueType  instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the  `gftools fix-nonhinting` script.
-
-</details>
 <details>
 <summary>:warning: <b>WARN:</b> Stricter unitsPerEm criteria for Google Fonts. </summary>
 
@@ -219,7 +205,7 @@ Fontbakery version: 0.6.7
 <summary>:warning: <b>WARN:</b> Check if OS/2 xAvgCharWidth is correct.</summary>
 
 * [com.google.fonts/check/034](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/034)
-* :warning: **WARN** OS/2 xAvgCharWidth is 464 but it should be 452 which corresponds to the weighted average of the widths of the latin lowercase glyphs in the font
+* :warning: **WARN** OS/2 xAvgCharWidth is 464 but it should be 453 which corresponds to the weighted average of the widths of the latin lowercase glyphs in the font
 
 </details>
 <details>
@@ -296,7 +282,7 @@ Fontbakery version: 0.6.7
 <summary>:zzz: <b>SKIP:</b> METADATA.pb font.filename field contains font name in right format?</summary>
 
 * [com.google.fonts/check/100](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/100)
-* :zzz: **SKIP** Unfulfilled Conditions: style, family_metadata
+* :zzz: **SKIP** Unfulfilled Conditions: style
 
 </details>
 <details>
@@ -366,7 +352,7 @@ Fontbakery version: 0.6.7
 <summary>:zzz: <b>SKIP:</b> METADATA.pb: Check font name is the same as family name.</summary>
 
 * [com.google.fonts/check/110](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/110)
-* :zzz: **SKIP** Unfulfilled Conditions: family_metadata, font_metadata
+* :zzz: **SKIP** Unfulfilled Conditions: font_metadata
 
 </details>
 <details>
@@ -580,10 +566,10 @@ Fontbakery version: 0.6.7
 
 |  | /Users/Air/Google/fonts/ofl/kreon/Kreon-VF.ttf |
 |:--- | ---:|
-| Dehinted Size | 51.6kb |
-| Hinted Size | 51.3kb |
-| Increase | -256 bytes |
-| Change   | -0.5 % |
+| Dehinted Size | 56.7kb |
+| Hinted Size | 56.5kb |
+| Increase | -236 bytes |
+| Change   | -0.4 % |
 
 
 </details>
@@ -599,6 +585,22 @@ Fontbakery version: 0.6.7
 
 * [com.google.fonts/check/061](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/061)
 * :information_source: **INFO** EPAR table not present in font. To learn more see https://github.com/googlefonts/fontbakery/issues/818
+
+</details>
+<details>
+<summary>:information_source: <b>INFO:</b> Is 'gasp' table set to optimize rendering?</summary>
+
+* [com.google.fonts/check/062](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/062)
+* :information_source: **INFO** These are the ppm ranges declared on the gasp table:
+
+PPM <= 65535:
+	flag = 0x0F
+	- Use gridfitting
+	- Use grayscale rendering
+	- Use gridfitting with ClearType symmetric smoothing
+	- Use smoothing along multiple axes with ClearType®
+
+* :bread: **PASS** 'gasp' table is correctly set, with one gaspRange:value of 0xFFFF:0x0F.
 
 </details>
 <details>
@@ -622,7 +624,7 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 <summary>:information_source: <b>INFO:</b> Font contains all required tables?</summary>
 
 * [com.google.fonts/check/052](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/052)
-* :information_source: **INFO** This font contains the following optional tables [loca, GPOS, DSIG]
+* :information_source: **INFO** This font contains the following optional tables [DSIG, GPOS, gasp, loca, prep]
 * :bread: **PASS** Font contains all required tables.
 
 </details>
@@ -750,6 +752,13 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 * [com.google.fonts/check/042](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/042)
 * :bread: **PASS** OS/2.sTypoAscender/Descender values match hhea.ascent/descent.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> Font enables smart dropout control in "prep" table instructions?</summary>
+
+* [com.google.fonts/check/072](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/072)
+* :bread: **PASS** 'prep' table contains instructions enabling smart dropout control.
 
 </details>
 <details>
@@ -1032,5 +1041,5 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 | :broken_heart: ERROR | :fire: FAIL | :warning: WARN | :zzz: SKIP | :information_source: INFO | :bread: PASS |
 |:-----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 2 | 2 | 62 | 7 | 70 |
-| 0% | 1% | 1% | 43% | 5% | 49% |
+| 0 | 0 | 2 | 50 | 8 | 83 |
+| 0% | 0% | 1% | 35% | 6% | 58% |
