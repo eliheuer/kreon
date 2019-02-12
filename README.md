@@ -8,8 +8,6 @@ Kreon targets text typesetting for magazines and news sites. With a slight slab-
 ### [⬇︎ Download the latest release](fonts)
 
 ## Build Instructions
-*For Unix-like operating systems: Mac, GNU+Linux, Windows Subsystem for GNU+Linux, etc.*
-
 To rebuild font files from source, run the following command from the repo root directory:
 ```
 python3 sources/BUILD.py --static --fixnonhinting
