@@ -202,13 +202,6 @@ Fontbakery version: 0.6.7
 
 </details>
 <details>
-<summary>:warning: <b>WARN:</b> Check if OS/2 xAvgCharWidth is correct.</summary>
-
-* [com.google.fonts/check/034](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/034)
-* :warning: **WARN** OS/2 xAvgCharWidth is 464 but it should be 453 which corresponds to the weighted average of the widths of the latin lowercase glyphs in the font
-
-</details>
-<details>
 <summary>:zzz: <b>SKIP:</b> Checking OS/2 usWeightClass.</summary>
 
 * [com.google.fonts/check/020](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/020)
@@ -566,9 +559,9 @@ Fontbakery version: 0.6.7
 
 |  | /Users/Air/Google/fonts/ofl/kreon/Kreon-VF.ttf |
 |:--- | ---:|
-| Dehinted Size | 56.7kb |
-| Hinted Size | 56.5kb |
-| Increase | -236 bytes |
+| Dehinted Size | 80.3kb |
+| Hinted Size | 79.9kb |
+| Increase | -344 bytes |
 | Change   | -0.4 % |
 
 
@@ -624,7 +617,7 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 <summary>:information_source: <b>INFO:</b> Font contains all required tables?</summary>
 
 * [com.google.fonts/check/052](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/052)
-* :information_source: **INFO** This font contains the following optional tables [DSIG, GPOS, gasp, loca, prep]
+* :information_source: **INFO** This font contains the following optional tables [loca, GPOS, gasp, prep, DSIG, GSUB]
 * :bread: **PASS** Font contains all required tables.
 
 </details>
@@ -895,6 +888,13 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 </details>
 <details>
+<summary>:bread: <b>PASS:</b> Check if OS/2 xAvgCharWidth is correct.</summary>
+
+* [com.google.fonts/check/034](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/034)
+* :bread: **PASS** OS/2 xAvgCharWidth value is correct.
+
+</details>
+<details>
 <summary>:bread: <b>PASS:</b> Font has correct post table version (2 for TTF, 3 for OTF)?</summary>
 
 * [com.google.fonts/check/015](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/015)
@@ -1041,5 +1041,5 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 | :broken_heart: ERROR | :fire: FAIL | :warning: WARN | :zzz: SKIP | :information_source: INFO | :bread: PASS |
 |:-----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 0 | 2 | 50 | 8 | 83 |
-| 0% | 0% | 1% | 35% | 6% | 58% |
+| 0 | 0 | 1 | 50 | 8 | 84 |
+| 0% | 0% | 1% | 35% | 6% | 59% |

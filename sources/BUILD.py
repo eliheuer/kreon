@@ -110,12 +110,12 @@ def intro():
     """
     Gives basic script info.
     """
-    printG("#    # #####                    #####    ################")
-    printG("#    # #                        #   #    #   ##         #")
-    printG(" #  #  ####                      #   #  #   # #   #######")
-    printG(" #  #  #     <---------------->  #    ##    # #      #")
-    printG("  ##   #                          #        #  #   ####")
-    printG("  ##   #                          ##########  #####")
+    printG("#    # #####        #####    ################")
+    printG("#    # #            #   #    #   ##         #")
+    printG(" #  #  ####          #   #  #   # #   #######")
+    printG(" #  #  #     <---->  #    ##    # #      #")
+    printG("  ##   #              #        #  #   ####")
+    printG("  ##   #              ##########  #####")
     print("\n**** Starting variable font build script:")
     print("     [+]", time.ctime())
     printG("    [!] Done")
